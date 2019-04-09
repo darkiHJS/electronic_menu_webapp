@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <em-home></em-home>
   </div>
 </template>
 
 <script>
-
+import EmHome from '_page/home/index'
 
 export default {
   name: 'app',
   components: {
-
+    EmHome
   }
 }
 </script>
