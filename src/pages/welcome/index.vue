@@ -2,7 +2,7 @@
   <div class="welcome">
     <P>欢迎用餐</P>
     <p>小桌 032号</p>
-    <i-button @click="handleClickToMenu">进入菜单</i-button>
+    <button @click="handleClickToMenu">进入菜单</button>
 	</div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     handleClickToMenu: function() {
-      this.$router.push('/menu')
+      this.$router.push('/electmenu')
     }
   }
 	/**

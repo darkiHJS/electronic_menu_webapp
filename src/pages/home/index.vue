@@ -3,8 +3,8 @@
 		<div class="shop-info">
 			XXX甜品馆，<span :style="{color:'red'}">欢迎您</span>
 		</div>
-		<swiper/>
-		<noway/>
+		<Swiper/>
+		<Noway/>
 	</div>
 </template>
 
@@ -19,7 +19,8 @@ export default {
 	},
 	mounted() {
 		this.$router.push('/welcome')
-	}
+	},
+
 	/**
 	 *  1.发送桌号申请通知
 	 *  2.有桌位，进入引导页。没有桌位，加入排队桌，cooki缓存消费者讯息，显示排队信息，开启轮询来更新排队信息

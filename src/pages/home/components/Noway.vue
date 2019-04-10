@@ -4,7 +4,7 @@
       <h4 class="queue-info_name">欢迎，{{user.name}}</h4>
       <p class="queue-info_order">{{currentOrder}}</p>
       <p class="queue-info_latencyTime">预计等待 {{latenctTime}}</p>
-      <i-button>预先点餐</i-button>
+      <button>预先点餐</button>
     </div>
   </div> 
 </template>

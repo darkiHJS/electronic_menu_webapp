@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Home from '_page/home/index'
 import Welcome from '_page/welcome/index'
-import Menu from '_page/menu/index'
+import ElectMenu from '_page/electmenu/index'
 
 Vue.use(Router)
 
@@ -18,12 +18,12 @@ export default new Router({
       name: 'Welcome',
       component: Welcome
     }, {
-      path: '/menu',
-      name: 'Menu',
-      component: Menu
+      path: '/electmenu',
+      name: 'ElectMenu',
+      component: ElectMenu
     }
   ],
-  scrollBehavior(to, from, savdPosition) {
+  scrollBehavior() {
     return {x:0, y:0}
   }
 })

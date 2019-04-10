@@ -1,16 +1,19 @@
 <template>
   <div class="menu">
     <!-- <router-view></router-view> -->
-    <tabs/>
+    <menu-tabs/>
+		<menu-list/>
 	</div>
 </template>
 
 <script>
-import Tabs from './components/tabs/Tabs'
+import MenuTabs from './components/Tabs/index'
+import MenuList from './components/List/index'
 export default {
-	name: 'menu',
+	name: 'electmenu',
 	components: {
-    Tabs
+    MenuTabs,
+		MenuList
 	}
 	/**
 	 *  1. 进入后开启Socket, 同步更新餐桌菜单
