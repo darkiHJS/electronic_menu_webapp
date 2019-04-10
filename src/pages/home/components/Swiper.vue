@@ -24,9 +24,10 @@ export default {
 <style lang="stylus">
 .swiper
   .swiper-box
+    position relative
     width 100%
     height 0
-    padding-bottom 22.6%
+    padding-bottom 33.3%
     border-radius .1rem
     overflow hidden
     .swiper-img

@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <em-home></em-home>
+    <keep-alive> <!-- 组件缓存 -->
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import EmHome from '_page/home/index'
-
 export default {
-  name: 'app',
-  components: {
-    EmHome
-  }
+  name: 'app'
 }
 </script>
 
-<style>
+<style lang="stylus">
 
 </style>
