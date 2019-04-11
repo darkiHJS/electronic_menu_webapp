@@ -2,13 +2,17 @@
 	<div class="list">
 		<div class="list-header">
 			<h2 class="header__title">风味炸物</h2>
-			<button class="header-btn__back">返回</button>
+			<button class="header-btn__back" @click="handleClickBack">返回</button>
 			<div class="header__bg"></div>
 		</div>
 		<swiper :options="swiperOption" class="list-carousel">
 			<swiper-slide class="list-carousel-item">
+				<card class="block"/>
 				<div class="block"></div>
 				<div class="block"></div>
+				<div class="block"></div>
+			</swiper-slide>
+			<swiper-slide class="list-carousel-item">
 				<div class="block"></div>
 				<div class="block"></div>
 				<div class="block"></div>
@@ -19,20 +23,8 @@
 				<div class="block"></div>
 				<div class="block"></div>
 				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
 			</swiper-slide>
 			<swiper-slide class="list-carousel-item">
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-			</swiper-slide>
-			<swiper-slide class="list-carousel-item">
-				<div class="block"></div>
-				<div class="block"></div>
 				<div class="block"></div>
 				<div class="block"></div>
 				<div class="block"></div>
@@ -43,12 +35,22 @@
 </template>
 
 <script>
+import Card from './Card'
+
 export default {
 	data() {
 		return {
 			swiperOption:{
 				loop: true,
 			}
+		}
+	},
+	components: {
+		Card
+	},
+	methods: {
+		handleClickBack() {
+			this.$router.push('/electmenu')
 		}
 	}
 }
@@ -94,7 +96,6 @@ export default {
 			flex-wrap wrap
 			.block
 				width calc(50% - .6rem)
-				height calc(((100vh - 1.16rem) / 3 ) - .4rem)
+				height calc(((100vh - 1.16rem) / 2 ) - .4rem)
 				margin 0 0 .4rem .4rem
-				background-color #000
 </style>
