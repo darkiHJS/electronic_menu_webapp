@@ -14,6 +14,11 @@ export default {
 	components: {
     MenuTabs,
 		MenuList
+	},
+	methods:{
+	},
+	mounted() {
+
 	}
 	/**
 	 *  1. 进入后开启Socket, 同步更新餐桌菜单
