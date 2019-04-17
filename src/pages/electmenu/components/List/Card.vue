@@ -12,24 +12,18 @@
 
 <script>
 export default {
-  data() {
-    return {
-      goods: {
-        imgUrl: 'http://qcloud.dpfile.com/pc/jaiLvB3rlLUSYkD-FLVfeJD22lDumnC2RT1Yp2K1uOhgtOtqc64tQgL2KqiKoY-8joJrvItByyS4HHaWdXyO_DrXIaWutJls2xCVbatkhjUNNiIYVnHvzugZCuBITtvjski7YaLlHpkrQUr5euoQrg.jpg', 
-        name: '爱斯基汲汲',
-        price: 300,
-        buy: 0
-      }
-    }
-  }
+  props: ['goods']
 }
 </script>
 
 <style lang="stylus">
 .card
   overflow hidden
+  box-sizing border-box
+  padding .4rem
   border-radius .3rem
   box-shadow 0 3px 5px pink 
+  color #000
   .card-img
     position relative
     overflow hidden

@@ -15,5 +15,4 @@ axios.interceptors.request.use( // 拦截器
   error => {        
       return Promise.error(error);    
 })
-
-
+export default axios

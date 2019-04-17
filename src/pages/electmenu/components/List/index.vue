@@ -1,34 +1,13 @@
 <template>
 	<div class="list">
 		<div class="list-header">
-			<h2 class="header__title">风味炸物</h2>
+			<h2 class="header__title">{{ goodsList.title }}</h2>
 			<button class="header-btn__back" @click="handleClickBack">返回</button>
 			<div class="header__bg"></div>
 		</div>
 		<swiper :options="swiperOption" class="list-carousel">
-			<swiper-slide class="list-carousel-item">
-				<card class="block"/>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-			</swiper-slide>
-			<swiper-slide class="list-carousel-item">
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-			</swiper-slide>
-			<swiper-slide class="list-carousel-item">
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-			</swiper-slide>
-			<swiper-slide class="list-carousel-item">
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<div class="block"></div>
+			<swiper-slide v-for="goods of goodsArr" :key="goods[0].id" class="list-carousel-item">
+				<card v-for="item of goods" :key="item.id" :goods="item" class="block"/>
 			</swiper-slide>
 		</swiper>
 	</div>
@@ -38,6 +17,26 @@
 import Card from './Card'
 
 export default {
+	props: ['goodsList'],
+	components: {
+		Card
+	},
+	methods: {
+		handleClickBack() {
+			this.$emit('goodsListOff')
+		}
+	},
+	computed: {
+		goodsArr:function() {
+			let arr = []
+			this.goodsList.goods.forEach((e, i)=> {
+				const index = Math.floor(i / 4)
+				if(!arr[index]) arr[index] = []
+				arr[index].push(e)
+			});
+			return arr
+		}
+	},
 	data() {
 		return {
 			swiperOption:{
@@ -45,13 +44,8 @@ export default {
 			}
 		}
 	},
-	components: {
-		Card
-	},
-	methods: {
-		handleClickBack() {
-			this.$router.push('/electmenu')
-		}
+	mounted() {
+
 	}
 }
 </script>
@@ -60,7 +54,6 @@ export default {
 .list
 	width 100%
 	background-color #fff
-	z-index 999
 	position absolute
 	top 0
 	left 0
@@ -91,7 +84,9 @@ export default {
 			z-index -1
 	.list-carousel
 		height calc(100vh - 1.16rem)
+		z-index 1
 		.list-carousel-item
+			z-index 1
 			display flex
 			flex-wrap wrap
 			.block

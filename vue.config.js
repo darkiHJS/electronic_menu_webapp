@@ -12,5 +12,6 @@ module.exports = {
 		.set('_page', resolve('src/pages'))
 		.set('_styl', resolve('src/assets/styles'))
 		.set('_img', resolve('src/assets/img'))
+		.set('_http', resolve('src/request'))
 	}
 }
