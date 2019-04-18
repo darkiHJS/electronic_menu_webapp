@@ -7,6 +7,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'babel-polyfill'
 
 import 'swiper/dist/css/swiper.css'
+import '_styl/iconfont/iconfont.css' // 引入图标库
 import '_styl/reset.css' // style reset
 import '_styl/border.css'
 

@@ -13,5 +13,6 @@ export default {
 </script>
 
 <style lang="stylus">
-
+#app 
+ height 100%
 </style>

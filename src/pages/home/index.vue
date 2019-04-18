@@ -1,41 +1,56 @@
 <template>
   <div class="home">
-		<div class="shop-info">
-			XXX甜品馆，<span :style="{color:'red'}">欢迎您</span>
-		</div>
-		<Swiper/>
-		<Noway/>
+		<shop-info/>
+		<swiper/>
+		<HomeBanner v-for="item of bannerConfig" :key="item.title" :config="item"/>
+		<promotion-info/>
 	</div>
 </template>
 
 <script>
+import ShopInfo from './components/ShopInfo'
 import Swiper from './components/Swiper'
-import Noway from './components/Noway'
+import HomeBanner from './components/HomeBar'
+import promotionInfo from './components/promotionInfo'
 export default {
 	name: 'home',
 	components: {
+		ShopInfo,
 		Swiper,
-		Noway
+		HomeBanner,
+		promotionInfo
 	},
-	mounted() {
-		this.$router.push('/welcome')
-	},
-
-	/**
-	 *  1.发送桌号申请通知
-	 *  2.有桌位，进入引导页。没有桌位，加入排队桌，cooki缓存消费者讯息，显示排队信息，开启轮询来更新排队信息
-	 *  3.预点餐按钮
-	 * 	4.预点餐菜单
-	 */
+	data() {
+		return {
+			bannerConfig: [{
+					title: '现在下单',
+					sub: 'ORDER NOW',
+					promotion: '',
+					icon: '&#xe60b;',
+					next: 'electmenu'
+				},{
+					title: '我的卡包',
+					sub: 'CARD WALLET',
+					promotion: '买2送1',
+					icon: '&#xe82e;'
+				},{
+					title: '礼品券',
+					sub: 'GIFT',
+					promotion: '',
+					icon: '&#xe692;'
+				}
+			]
+		}
+	}
 }
 </script>
 
 <style lang="stylus">
+@import '~_styl/config.styl';
 .home
-	min-height 100vh
-	padding 0 .4rem
-	background-color #fab1a0
-	color #fff
+	height 100%
+	padding 0 .2rem
+	color $textColor
 .shop-info
 	padding .2rem .4rem
 	text-align right 
