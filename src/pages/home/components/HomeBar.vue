@@ -39,6 +39,7 @@ export default {
       .promotion
         display inline-block
         padding .04rem
+        font-weight 100
         border-radius .04rem
         margin-left .1rem
         background-color $styleColor

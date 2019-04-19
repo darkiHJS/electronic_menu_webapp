@@ -29,6 +29,7 @@ export default {
   }
 }
 </script>
+
 <style lang="stylus">
 .swiper
   .swiper-box

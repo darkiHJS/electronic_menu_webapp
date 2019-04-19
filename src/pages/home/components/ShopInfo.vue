@@ -15,14 +15,12 @@ export default {
 .shopinfo
   font-size 14px
   padding .2rem .05rem
-  h3
-    font-weight 600
-    .position
-      display inline-block
-      font-size 12px
-      background-color $styleColor
-      color #fff
-      margin-left .2rem
-      padding .04rem 0
+  .position
+    display inline-block
+    font-size 12px
+    background-color $styleColor
+    color #fff
+    margin-left .2rem
+    padding .04rem 0
 </style>
 

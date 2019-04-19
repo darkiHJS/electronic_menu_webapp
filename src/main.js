@@ -5,6 +5,7 @@ import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 import 'babel-polyfill'
+import './cube-ui'
 
 import 'swiper/dist/css/swiper.css'
 import '_styl/iconfont/iconfont.css' // 引入图标库

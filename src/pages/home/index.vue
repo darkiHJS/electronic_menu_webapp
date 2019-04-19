@@ -27,7 +27,7 @@ export default {
 					sub: 'ORDER NOW',
 					promotion: '',
 					icon: '&#xe60b;',
-					next: 'electmenu'
+					next: 'menu'
 				},{
 					title: '我的卡包',
 					sub: 'CARD WALLET',
@@ -51,7 +51,4 @@ export default {
 	height 100%
 	padding 0 .2rem
 	color $textColor
-.shop-info
-	padding .2rem .4rem
-	text-align right 
 </style>
