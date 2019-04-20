@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '_page/home/index'
-import Welcome from '_page/welcome/index'
 import Menu from '_page/menu/index'
+import Cart from '_page/cart/index'
 
 Vue.use(Router)
 
@@ -14,13 +14,13 @@ export default new Router({
       name: 'Home',
       component: Home
     }, {
-      path: '/welcome',
-      name: 'Welcome',
-      component: Welcome
-    }, {
       path: '/menu',
       name: 'Menu',
       component: Menu
+    }, {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
     }
   ],
   scrollBehavior() {

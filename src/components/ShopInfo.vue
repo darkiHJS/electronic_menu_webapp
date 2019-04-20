@@ -14,7 +14,8 @@ export default {
 @import '~_styl/config.styl';
 .shopinfo
   font-size 14px
-  padding .2rem .05rem
+  color $textColor
+  padding 12px
   .position
     display inline-block
     font-size 12px

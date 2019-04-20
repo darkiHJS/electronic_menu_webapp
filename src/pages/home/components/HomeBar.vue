@@ -51,6 +51,7 @@ export default {
     .title__icon
       position absolute
       font-size 48px
+      font-weight 100
       top 50%
       transform translateY(-50%)
       right 0

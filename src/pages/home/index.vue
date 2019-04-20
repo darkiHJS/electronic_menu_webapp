@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-		<shop-info/>
 		<swiper/>
 		<HomeBanner v-for="item of bannerConfig" :key="item.title" :config="item"/>
 		<promotion-info/>
@@ -8,14 +7,12 @@
 </template>
 
 <script>
-import ShopInfo from './components/ShopInfo'
 import Swiper from './components/Swiper'
 import HomeBanner from './components/HomeBar'
 import promotionInfo from './components/promotionInfo'
 export default {
 	name: 'home',
 	components: {
-		ShopInfo,
 		Swiper,
 		HomeBanner,
 		promotionInfo
@@ -26,7 +23,7 @@ export default {
 					title: '现在下单',
 					sub: 'ORDER NOW',
 					promotion: '',
-					icon: '&#xe60b;',
+					icon: '&#xe764;',
 					next: 'menu'
 				},{
 					title: '我的卡包',
@@ -37,7 +34,7 @@ export default {
 					title: '礼品券',
 					sub: 'GIFT',
 					promotion: '',
-					icon: '&#xe692;'
+					icon: '&#xe6ed;'
 				}
 			]
 		}
