@@ -1,5 +1,5 @@
 <template>
-  <div class="food-item">
+  <div class="food-item" @click="handleClickFoodItem">
     <div class="icon">
       <img :src="food.imgUrl">
     </div>
@@ -14,7 +14,24 @@
 
 <script>
 export default {
-  props:['food']
+  props:['food'],
+  inheritAttrs: false,
+  methods:{
+    handleClickFoodItem(){
+      let count = 1
+      for(let i = 0; i < this.order.length; i++) {
+        if(this.order[i].id === this.food.id) {
+          count = this.order[i].count
+        }          
+      }
+      this.$emit('openDetil',this.food, count)
+    }
+  },
+  computed: {
+    order() {
+      return this.$store.state.cart.cart
+    }
+  }
 }
 </script>
 

@@ -11,7 +11,12 @@
           :label="item.name"
           :title="item.name">
           <ul>
-            <food-item v-for="food in goodsList[item.sort].goods" :key="food.id" :food="food"/>
+            <food-item 
+              v-for="food in goodsList[item.sort].goods" 
+              :key="food.id" 
+              :food="food"
+              v-on="$listeners" 
+              />
           </ul>  
         </cube-scroll-nav-panel>
         </template>
@@ -27,6 +32,7 @@ export default {
   components: {
     FoodItem
   },
+  inheritAttrs: false,
   data(){
     return {
       goods: false,

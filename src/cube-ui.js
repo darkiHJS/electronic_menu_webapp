@@ -8,6 +8,7 @@ import {
   Style,
   TabBar,
   Popup,
+  Toast,
   Dialog,
   Scroll,
   Slide,
@@ -17,6 +18,7 @@ import {
 
 Vue.use(TabBar)
 Vue.use(Popup)
+Vue.use(Toast)
 Vue.use(Dialog)
 Vue.use(Scroll)
 Vue.use(Slide)
